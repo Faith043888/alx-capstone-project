@@ -8,25 +8,41 @@ const Welcome = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-orange-100 to-orange-200 text-center p-6">
+    <div
+      className="relative flex flex-col items-center justify-center min-h-screen text-center text-white px-4 sm:px-6 md:px-10 lg:px-20"
+      style={{
+        backgroundImage:
+          "url('https://www.themealdb.com/images/media/meals/usywpp1511189717.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/*Overlay*/}
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-      <h1 className="text-5xl font-bold text-orange-700 mb-4">
-        Welcome To Recipe Finder</h1>
-      
+      {/*Content*/}
+      <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-2xl">
+        {/*Heading*/}
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold italic mb-10 leading-tight drop-shadow-lg">
+          Welcome <br className="sm:hidden" /> to <br className="sm:hidden" />{" "}
+          Recipe Finder
+        </h1>
 
-      <h2 className="text-2xl font-semibold text-orange-600 mb-4">
-        Every meal tells a story. Let's share our stories through recipes!</h2>
-      
-    <p className="text-lg text-gray-700 mb-8 max-w-md">
-        Search for different types of delicacy recipes by dish name or select one of the categories to explore delicious recipes.
-      </p>
+        {/*Button*/}
+        <button
+          onClick={handleGetStarted}
+          className="bg-blue-600 hover:bg-blue-700 text-white text-lg sm:text-xl font-semibold italic px-8 py-3 sm:px-10 sm:py-4 rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105"
+        >
+          get started
+        </button>
 
-      <button
-        onClick={handleGetStarted}
-        className="px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition duration-300"
-      >
-        Get Started
-      </button>
+        {/*Description*/}
+        <p className="text-sm sm:text-base md:text-lg text-gray-200 mt-8 leading-relaxed max-w-lg">
+          Search for different types of delicious recipes by dish name or browse
+          categories to explore new tastes and cooking ideas.
+        </p>
+      </div>
     </div>
   );
 };
