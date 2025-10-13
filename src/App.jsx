@@ -1,11 +1,20 @@
+import { Routes, Route } from "react-router-dom";
+import Welcome from "./pages/Welcome";
+import Home from "./pages/Home";
+import AddRecipe from "./pages/AddRecipe";
+import RecipeDetails from "./pages/RecipeDetails";
+
 function App() {
   return (
-    <div className="text-center p-8">
-      <h1 className="text-3xl font-bold text-blue-500">Recipe Finder</h1>
-      <p className="text-gray-600 mt-2">welcome to Recipe Finder </p>
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<Welcome />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/add" element={<AddRecipe />} />
+      <Route path="/recipes/:id" element={<RecipeDetails />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
+
 
