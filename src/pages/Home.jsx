@@ -9,7 +9,7 @@ const Home = () => {
       name: "Starters",
       image: "https://www.themealdb.com/images/media/meals/1548772327.jpg",
       description:
-        "Light and tasty dishes to kick off your meal. Perfect for whetting your appetite before the main course.",
+        "Light and tasty meal. Perfect for whetting your appetite before the main course.",
     },
 
     {
