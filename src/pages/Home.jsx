@@ -60,8 +60,8 @@ const Home = () => {
         {categories.map((cat) => (
           <div
             key={cat.name}
-            onClick={() => navigate(`/category/${cat.name.toLowerCase()}`)}
-            className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 cursor-pointer overflow-hidden p-4"
+            onClick={() => navigate(`/category/${cat.name.replace(/\s+/g, "").toLowerCase()}`)}
+              className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 cursor-pointer overflow-hidden p-4"
           >
             {/* Image */}
             <img
