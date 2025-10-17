@@ -1,16 +1,73 @@
-# React + Vite
+Live Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[ still to add the live demo]
 
-Currently, two official plugins are available:
+Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ Search recipes by name (e.g “creamy tomato soup”)
 
-## React Compiler
+ View full recipe details (ingredients & instructions)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+ Browse meals by category (Starters, Main Course, Desserts)
 
-## Expanding the ESLint configuration
+ Fetch data from TheMealDB API
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ Responsive UI with Tailwind CSS
+
+ Handles errors & “no results” cases gracefully
+
+ Tech Stack
+
+React (Vite)
+
+Tailwind CSS
+
+React Router
+
+JavaScript (ES6+)
+
+TheMealDB API
+
+ Setup Instructions
+# Clone the repository
+git clone https://github.com/Faith043888/alx-capstone-project.git
+
+# Go to project directory
+cd recipe-finder
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+
+
+Then open http://localhost:5173/
+ in your browser.
+
+🧾 API Reference
+
+Base URL: https://www.themealdb.com/api/json/v1/1/
+
+Example endpoints:
+
+/search.php?s=Arrabiata → Search by meal name
+
+/filter.php?c=Dessert → Filter by category
+
+/lookup.php?i=52772 → Get full recipe details
+
+💭 Future Improvements
+
+Add Favorites feature
+
+Dark/Light mode toggle
+
+YouTube video embeds
+
+
+ Author
+
+Faith Kalamshe
+Aspiring Frontend Developer
+[https://github.com/Faith043888] • [https://github.com/Faith043888/alx-capstone-project.git]
