@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import Navbar from "../components/Navbar";
 
 
 const Home = () => {
@@ -68,6 +69,8 @@ const handleSearch = async (e) => {
  {/*page Content*/}
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-amber-100 p-6">
+    <Navbar />
+
       {/* Header */}
       <h1 className="text-4xl font-bold text-orange-700 text-center mb-2">
         Recipe Finder
@@ -115,7 +118,7 @@ const handleSearch = async (e) => {
       <div
         key={meal.idMeal}
         onClick={() => navigate(`/recipe/${meal.idMeal}`)}
-        className="bg-white rounded-xl shadow-md hover:shadow-lg transition-transform transform hover:-translate-y-1 cursor-pointer overflow-hidden"
+        className="bg-white/90 backdrop-blur-md rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-[1.02] cursor-pointer overflow-hidden"
       >
         <img
           src={meal.strMealThumb}
@@ -132,20 +135,19 @@ const handleSearch = async (e) => {
   </div>
 )}
 
-
   {/* Category List */}
       <div className="flex flex-col gap-8 max-w-4xl mx-auto">
         {categories.map((cat) => (
           <div
             key={cat.name}
             onClick={() => navigate(`/category/${cat.name.replace(/\s+/g, "").toLowerCase()}`)}
-              className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 cursor-pointer overflow-hidden p-4"
+              className="flex flex-col md:flex-row items-center bg-white/90 backdrop-blur-md rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 hover:scale-[1.01] cursor-pointer overflow-hidden p-4"
           >
             {/* Image */}
             <img
               src={cat.image}
               alt={cat.name}
-              className="w-full md:w-1/3 h-40 object-cover rounded-lg"
+              className="w-full md:w-1/3 h-40 object-cover rounded-lg border-2 border-orange-200"
             />
 
             {/* Text*/}
