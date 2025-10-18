@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 const Starters = () => {
   const [starters, setStarters] = useState([]);
@@ -14,6 +15,8 @@ const Starters = () => {
 
   return (
     <div className="min-h-screen bg-orange-50 px-4 py-6">
+      <Navbar/>
+      
       <button
         onClick={() => navigate(-1)}
         className="text-orange-700 font-semibold hover:text-orange-900 flex items-center gap-2 mb-4"
