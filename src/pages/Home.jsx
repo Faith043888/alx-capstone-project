@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Navbar from "../components/Navbar";
-
+import SearchBar from "../components/SearchBar";
 
 const Home = () => {
    const navigate = useNavigate();
@@ -81,25 +81,8 @@ const handleSearch = async (e) => {
         Select a category or search for your favorite dish by name.
       </p>
 
- {/* Search Bar */}
-<form
-  onSubmit={handleSearch}
-  className="flex justify-center mb-10 gap-2 flex-wrap">
-
-  <input
-    type="text"
-    placeholder="Search by dish name..."
-    value={query}
-    onChange={(e) => setQuery(e.target.value)}
-    className="w-full max-w-md p-3 rounded-full border border-orange-300 shadow-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-400"
-  />
-  <button
-    type="submit"
-    className="bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-orange-700 transition"
-  >
-    Search
-  </button>
-</form>
+    {/* Search Bar */}
+    <SearchBar query={query} setQuery={setQuery} handleSearch={handleSearch} />
 
     {/* Search Results */}
 {loading && (
