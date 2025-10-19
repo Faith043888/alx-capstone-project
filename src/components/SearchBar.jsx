@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchBar = ({ query, setQuery, handleSearch }) => {
   return (
-    <form
+    <form 
       onSubmit={handleSearch}
       className="flex justify-center mb-10 gap-2 flex-wrap"
     >
