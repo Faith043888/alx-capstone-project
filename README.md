@@ -6,7 +6,7 @@ A fully functional **Recipe Finder** web application built as part of the ALX Fu
 
 ## Live Demo
 
-[I am still to add the live demo]
+[https://alx-capstone-project-ten.vercel.app/]
 
 ---
 
@@ -21,8 +21,7 @@ A fully functional **Recipe Finder** web application built as part of the ALX Fu
 - Fetch data dynamically from [TheMealDB API](https://www.themealdb.com/api.php)  
 - Components created:  
   - `Navbar.jsx` – navigation bar  
-  - `SearchBar.jsx` – handles recipe search input  
-  - `AddRecipe.jsx` – form to add new recipes  
+  - `SearchBar.jsx` – handles recipe search input    
   - `RecipeDetails.jsx` – shows detailed recipe information  
   - `Header.jsx` – currently a placeholder for future header design  
   - `RecipeCard.jsx` – currently a placeholder for displaying recipe summaries  
@@ -40,7 +39,7 @@ A fully functional **Recipe Finder** web application built as part of the ALX Fu
 ## Tech Stack
 
 - **React (Vite)**  
-- **Tailwind CSS**  
+- **Tailwind CSS v4 (using Vite integration)** 
 - **React Router**  
 - **JavaScript (ES6+)**  
 - **TheMealDB API**  
@@ -118,12 +117,16 @@ myrecipefinder/
 │  ├─ index.css
 │  └─ App.css
 ├─ package.json
-├─ tailwind.config.js
 ├─ postcss.config.js
 ├─ vite.config.js
 ├─ eslint.config.js
 ├─ README.md
 └─ node_modules/
+
+PleaseNote:
+This project uses the latest Tailwind CSS v4 with Vite integration (npm install tailwindcss/vite).
+Styles are imported directly in index.css using @import "tailwindcss";.
+
 
 Author
 Name: Faith Kalamshe
